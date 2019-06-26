@@ -1,0 +1,1 @@
+﻿我曾经转过几个到unity中，只需改很少代码就可以。常见的差异比如：iResolution ＝》_ScreenParamsiGlobalTime => _Time.yglFragCoord => float4 sp:WPOS vec2 => float2mix => lerpmod => fmodtexture2D => tex2DtextureCube => texCUBEmat2=>float2x2fract=>frac
