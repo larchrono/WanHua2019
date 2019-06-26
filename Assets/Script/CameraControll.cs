@@ -23,6 +23,8 @@ public class CameraControll : MonoBehaviour
 
         transform.position = new Vector3(init_x,init_y, -3);
         main.orthographicSize = init_size;
+
+        Screen.fullScreen = true;
     }
 
     // Update is called once per frame
@@ -51,6 +53,10 @@ public class CameraControll : MonoBehaviour
         if(Input.GetKey(KeyCode.E)){
             main.orthographicSize -= moveFactor;
             SaveCameraState();
+        }
+        if(Input.GetKey(KeyCode.F12)){
+            SaveCameraState();
+            Application.Quit();
         }
     }
 

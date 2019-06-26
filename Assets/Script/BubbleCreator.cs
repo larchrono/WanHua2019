@@ -8,7 +8,7 @@ public class BubbleCreator : MonoBehaviour
 
     public GameObject item;
     public GameObject soundItem;
-
+    [Header("泡泡設定")]
     public float distance = 7;
     public int maxRow;
     public int maxCol;
@@ -17,6 +17,7 @@ public class BubbleCreator : MonoBehaviour
     public float randomSize_min = 2;
     public float randomSize_max = 5;
 
+    [Header("聲音觸發設定")]
     public int soundRow;
     public int soundCol;
     public float soundDistance;
