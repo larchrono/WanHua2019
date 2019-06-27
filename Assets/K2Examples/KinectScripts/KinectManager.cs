@@ -2206,6 +2206,7 @@ public class KinectManager : MonoBehaviour
 		if (instance == null) 
 		{
 			instance = this;
+			InvokeRepeating("TryAccessKinect",10f,10f);
 		}
 		else if (instance != this) 
 		{
@@ -4807,6 +4808,14 @@ public class KinectManager : MonoBehaviour
 				avatarControllers.Add(avatar);
 			}
 		}
+	}
+
+	void TryAccessKinect(){
+		if(!IsInitialized()){
+			Awake();
+			Debug.Log("Retry Access Kinect");
+		}
+		CancelInvoke();
 	}
 
 }
